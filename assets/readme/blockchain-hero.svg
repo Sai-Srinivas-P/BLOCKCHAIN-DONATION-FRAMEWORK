@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">LifeLink blockchain donation network</title>
+  <desc id="desc">Animated network connecting donor, recipient, hospital, Django, Ganache and transaction ledger nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06131f"/>
+      <stop offset="0.55" stop-color="#0b2535"/>
+      <stop offset="1" stop-color="#102f2a"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" x2="1">
+      <stop offset="0" stop-color="#4de6ff"/>
+      <stop offset="1" stop-color="#2aa7ff"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" x2="1">
+      <stop offset="0" stop-color="#72f2c1"/>
+      <stop offset="1" stop-color="#3bd7a0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .label{font-family:Inter,Arial,sans-serif;fill:#e7fbff}
+      .muted{font-family:Inter,Arial,sans-serif;fill:#8fb1bf}
+      .small{font-size:18px;letter-spacing:1.5px}
+      .big{font-size:54px;font-weight:800}
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    </style>
+  </defs>
+  <rect width="1400" height="760" rx="42" fill="url(#bg)"/>
+  <g opacity=".22">
+    <circle cx="110" cy="120" r="150" fill="#2aa7ff"/>
+    <circle cx="1260" cy="660" r="180" fill="#3bd7a0"/>
+  </g>
+
+  <text x="85" y="105" class="muted small">LIFELINK / ORGAN DONATION + BLOCKCHAIN</text>
+  <text x="85" y="170" class="label big">From consent to</text>
+  <text x="85" y="232" class="label big">verifiable transaction</text>
+  <text x="88" y="278" class="muted" font-size="21">Django workflows meet a local Ethereum ledger through Web3.py + Ganache.</text>
+
+  <!-- animated network -->
+  <g stroke="#4de6ff" stroke-width="3" opacity=".55">
+    <path d="M210 470 C350 350 455 350 570 420"/>
+    <path d="M570 420 C680 310 820 310 910 420"/>
+    <path d="M910 420 C1030 350 1110 365 1215 470"/>
+    <path d="M570 420 C690 505 790 505 910 420"/>
+  </g>
+
+  <g fill="none" stroke="url(#cyan)" stroke-width="3" stroke-dasharray="14 12" opacity=".9">
+    <path d="M210 470 C350 350 455 350 570 420">
+      <animate attributeName="stroke-dashoffset" from="0" to="-52" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M570 420 C680 310 820 310 910 420">
+      <animate attributeName="stroke-dashoffset" from="0" to="-52" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M910 420 C1030 350 1110 365 1215 470">
+      <animate attributeName="stroke-dashoffset" from="0" to="-52" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- donor -->
+  <g transform="translate(120 405)">
+    <rect width="180" height="130" rx="24" fill="#0f2130" stroke="#4de6ff" stroke-width="2"/>
+    <circle cx="45" cy="42" r="20" fill="#4de6ff" opacity=".9"/>
+    <path d="M45 30v24M33 42h24" stroke="#06131f" stroke-width="5" stroke-linecap="round"/>
+    <text x="78" y="40" class="label" font-size="20" font-weight="700">DONOR</text>
+    <text x="30" y="82" class="muted" font-size="16">identity + donation</text>
+    <text x="30" y="105" class="muted mono" font-size="13">sha256(record)</text>
+  </g>
+
+  <!-- django -->
+  <g transform="translate(475 350)">
+    <rect width="205" height="140" rx="24" fill="#0f2130" stroke="#72f2c1" stroke-width="2"/>
+    <rect x="24" y="25" width="45" height="45" rx="10" fill="#103c30"/>
+    <text x="46" y="57" text-anchor="middle" class="label" font-size="26" font-weight="800">D</text>
+    <text x="84" y="43" class="label" font-size="20" font-weight="700">DJANGO</text>
+    <text x="84" y="69" class="muted" font-size="15">sessions + workflow</text>
+    <text x="24" y="103" class="muted mono" font-size="13">MySQL persistence</text>
+  </g>
+
+  <!-- ganache -->
+  <g transform="translate(800 350)">
+    <rect width="220" height="140" rx="24" fill="#0f2130" stroke="#4de6ff" stroke-width="2"/>
+    <circle cx="48" cy="48" r="24" fill="#153a49" stroke="#4de6ff"/>
+    <circle cx="48" cy="48" r="8" fill="#4de6ff" filter="url(#glow)">
+      <animate attributeName="r" values="7;12;7" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="88" y="44" class="label" font-size="20" font-weight="700">GANACHE</text>
+    <text x="88" y="70" class="muted" font-size="15">local Ethereum node</text>
+    <text x="28" y="105" class="muted mono" font-size="13">127.0.0.1:7545</text>
+  </g>
+
+  <!-- recipient -->
+  <g transform="translate(1120 405)">
+    <rect width="180" height="130" rx="24" fill="#0f2130" stroke="#72f2c1" stroke-width="2"/>
+    <circle cx="45" cy="42" r="20" fill="#72f2c1" opacity=".9"/>
+    <path d="M45 30c-7 12-17 17-17 25 0 9 7 15 17 15s17-6 17-15c0-8-10-13-17-25z" fill="#073027"/>
+    <text x="78" y="40" class="label" font-size="20" font-weight="700">RECIPIENT</text>
+    <text x="30" y="82" class="muted" font-size="16">request + status</text>
+    <text x="30" y="105" class="muted mono" font-size="13">match → complete</text>
+  </g>
+
+  <!-- ledger strip -->
+  <g transform="translate(290 585)">
+    <rect width="820" height="92" rx="30" fill="#071721" stroke="#224354"/>
+    <text x="30" y="37" class="muted small">TRANSACTION LEDGER</text>
+    <text x="30" y="67" class="label mono" font-size="18">0xd8ad...23ab  →  block 42  →  gas 21,xxx</text>
+    <circle cx="765" cy="46" r="11" fill="#72f2c1" filter="url(#glow)">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
