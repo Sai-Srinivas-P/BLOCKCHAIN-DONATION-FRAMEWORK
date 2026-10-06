@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 530" role="img" aria-labelledby="title">
+<title id="title">Animated blockchain receipt card</title>
+<defs>
+ <linearGradient id="paper" x1="0" x2="1"><stop stop-color="#f3fbff"/><stop offset="1" stop-color="#dfeef2"/></linearGradient>
+ <style>.k{font-family:ui-monospace,monospace;fill:#2c4a56}.h{font-family:Inter,Arial,sans-serif;fill:#0a2430}.muted{font-family:Inter,Arial,sans-serif;fill:#5c7782}</style>
+</defs>
+<rect width="1200" height="530" rx="34" fill="#081521"/>
+<text x="48" y="56" class="muted" font-size="16" letter-spacing="3">LOCAL CHAIN RECEIPT / DEMO VISUAL</text>
+
+<g transform="translate(110 100)">
+ <rect width="980" height="350" rx="30" fill="url(#paper)"/>
+ <text x="42" y="62" class="h" font-size="28" font-weight="800">Transaction mined</text>
+ <circle cx="902" cy="48" r="14" fill="#2bc48a">
+   <animate attributeName="r" values="10;15;10" dur="1.4s" repeatCount="indefinite"/>
+ </circle>
+ <text x="42" y="98" class="muted" font-size="15">Stored by the Django application after Ganache confirms the receipt.</text>
+
+ <g class="k" font-size="17">
+  <text x="42" y="145">TX HASH</text>
+  <text x="280" y="145">0x9c4d...f0a1</text>
+  <text x="42" y="187">SENDER</text>
+  <text x="280" y="187">0xB17a...1D20</text>
+  <text x="42" y="229">CONTRACT</text>
+  <text x="280" y="229">0xd8ad...23ab</text>
+  <text x="42" y="271">BLOCK</text>
+  <text x="280" y="271">00000042</text>
+  <text x="42" y="313">GAS USED</text>
+  <text x="280" y="313">21,xxx</text>
+ </g>
+
+ <path d="M650 145 H880" stroke="#8cb0b9" stroke-width="2"/>
+ <path d="M650 187 H880" stroke="#8cb0b9" stroke-width="2"/>
+ <path d="M650 229 H880" stroke="#8cb0b9" stroke-width="2"/>
+ <path d="M650 271 H880" stroke="#8cb0b9" stroke-width="2"/>
+ <path d="M650 313 H880" stroke="#8cb0b9" stroke-width="2"/>
+
+ <rect x="652" y="126" width="225" height="215" rx="18" fill="#edf7f8" stroke="#bfd8dd"/>
+ <text x="674" y="160" class="h" font-size="15" font-weight="700">PERSISTED FIELDS</text>
+ <text x="674" y="193" class="muted" font-size="14">hash</text>
+ <text x="674" y="218" class="muted" font-size="14">sender address</text>
+ <text x="674" y="243" class="muted" font-size="14">contract address</text>
+ <text x="674" y="268" class="muted" font-size="14">block number</text>
+ <text x="674" y="293" class="muted" font-size="14">gas + mined time</text>
+ <text x="674" y="318" class="muted" font-size="14">transaction value</text>
+</g>
+</svg>
